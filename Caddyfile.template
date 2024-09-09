@@ -1,0 +1,7 @@
+$DOMAIN {
+	log $PROJECT_NAME # Enable Caddy access logs (for goaccess)
+    file_server / {
+        root /root/$PROJECT_NAME/public
+    }
+	redir /302 /
+}

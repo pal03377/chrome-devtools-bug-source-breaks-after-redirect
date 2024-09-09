@@ -1,0 +1,8 @@
+services:
+  chrome-devtools-bug:
+    container_name: $PROJECT_NAME-template
+    image: "busybox"
+    ports:
+      - "127.0.0.1:$PORT:8000" # host port : container port. Bind only locally to avoid exposing the service without Caddy
+    command:
+      sleep infinity
